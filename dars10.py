@@ -194,3 +194,74 @@ os.system("clear")
 #     with Pool(2) as pool:
 #         result = pool.map(do, tasks)
 #         print(result)
+
+
+
+
+
+
+
+#### filega son yozadigan multiprossing qilingan file
+# start = time.time()
+#
+# def yozar(file_name):
+#     with open(file_name, "w") as file:
+#         for num in range(1000000):
+#             file.write(f"{num}  ")
+#
+# if __name__ == "__main__":
+#     files = ["myfile1.txt", "myfile2.txt", "myfile3.txt", "myfile4.txt", "myfile5.txt"]
+#     processes = []
+#
+#     for file in files:
+#         proces = multiprocessing.Process(target=yozar, args=(file,))
+#         processes.append(proces)
+#         proces.start()
+#
+#     for proces in processes:
+#         proces.join()
+#
+# print(f"All this tasks have been done, spanded time: {time.time() - start}")
+#
+#
+
+
+
+####        Pool bilan sihlaydigan multiprosserga misoollar
+# def do(work):
+#     print("Workers are doing tasks")
+#     sleep(2)
+#     return f"{work} done"
+#
+# tasks = range(1, 12)
+#
+# if __name__ == "__main__":
+#     with Pool(2) as pool:
+#         result = pool.map(do, tasks)
+#         print(result)
+
+
+
+
+
+
+###     random tarzda guruhlarga bo'ladigan sayt
+# def guruhga_bolinamiz(numbers):
+#     big_list = []
+#     small_list = []
+#     for i in numbers:
+#         small_list.append(i)
+#         if len(small_list) == 3:
+#             big_list.append(small_list)
+#             small_list = []
+#     return big_list
+#
+# raqamlar = list(range(1, 18))
+#
+# random.shuffle(raqamlar)
+#
+# print(guruhga_bolinamiz(raqamlar))
+
+
+
+
