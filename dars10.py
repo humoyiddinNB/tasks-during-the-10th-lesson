@@ -149,3 +149,48 @@ os.system("clear")
 #         proces.join()
 #
 #     print("Barcha jarayonlar tugadi")
+
+
+
+
+
+
+
+#### filega son yozadigan multiprossing qilingan file
+# start = time.time()
+#
+# def yozar(file_name):
+#     with open(file_name, "w") as file:
+#         for num in range(1000000):
+#             file.write(f"{num}  ")
+#
+# if __name__ == "__main__":
+#     files = ["myfile1.txt", "myfile2.txt", "myfile3.txt", "myfile4.txt", "myfile5.txt"]
+#     processes = []
+#
+#     for file in files:
+#         proces = multiprocessing.Process(target=yozar, args=(file,))
+#         processes.append(proces)
+#         proces.start()
+#
+#     for proces in processes:
+#         proces.join()
+#
+# print(f"All this tasks have been done, spanded time: {time.time() - start}")
+#
+#
+
+
+
+####        Pool bilan sihlaydigan multiprosserga misoollar
+# def do(work):
+#     print("Workers are doing tasks")
+#     sleep(2)
+#     return f"{work} done"
+#
+# tasks = range(1, 12)
+#
+# if __name__ == "__main__":
+#     with Pool(2) as pool:
+#         result = pool.map(do, tasks)
+#         print(result)
